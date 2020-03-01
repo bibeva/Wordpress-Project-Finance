@@ -25,6 +25,8 @@
 		<link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
 		<!-- font awesome 5 cdn -->
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+		<!-- slick css -->
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	</head>
 
 	<body <?php body_class(); ?>>
@@ -80,10 +82,8 @@
 								$call_us = get_post_meta( get_the_ID(), 'Call Us', true);
 								$email = get_post_meta( get_the_ID(), 'Email', true);
 
-								if( ! empty( $call_us ) ) {
-									echo '<li class="tel"><a href="'. $call_us .'">' . $call_us . '</a></li>';
-									echo '<li class="email"><a href="'. $email .'">' . $email . '</a></li>';
-								}
+								echo '<li class="tel"><a href="'. $call_us .'">' . $call_us . '</a></li>';
+								echo '<li class="email"><a href="'. $email .'">' . $email . '</a></li>';
 							?>
 						</ul>
 						<?php endwhile; ?>
