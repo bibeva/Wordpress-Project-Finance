@@ -44,7 +44,7 @@ get_header(); ?>
     <h2>Our Services</h2>
     <div class="cols">
       <?php 
-        $args = array( 'post_type' => 'our_services' );
+        $args = array( 'post_type' => 'our_services','posts_per_page' =>  6);
         $loop = new WP_Query( $args );
         while ( $loop->have_posts() ) : $loop->the_post();
       ?> 	

@@ -67,7 +67,6 @@
 								<span class="toggle-icon">
 									<?php twentytwenty_the_theme_svg( 'ellipsis' ); ?>
 								</span>
-								<span class="toggle-text"><?php _e( 'Menu', 'twentytwenty' ); ?></span>
 							</span>
 						</button><!-- .nav-toggle -->
 					</div>
@@ -82,8 +81,8 @@
 								$call_us = get_post_meta( get_the_ID(), 'Call Us', true);
 								$email = get_post_meta( get_the_ID(), 'Email', true);
 
-								echo '<li class="tel"><a href="'. $call_us .'">' . $call_us . '</a></li>';
-								echo '<li class="email"><a href="'. $email .'">' . $email . '</a></li>';
+								echo '<li class="tel"><a href="tel:'. $call_us .'">' . $call_us . '</a></li>';
+								echo '<li class="email"><a href="mailto:'. $email .'">' . $email . '</a></li>';
 							?>
 						</ul>
 						<?php endwhile; ?>
