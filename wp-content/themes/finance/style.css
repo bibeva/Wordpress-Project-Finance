@@ -1605,7 +1605,7 @@ ul.primary-menu {
 
 .primary-menu ul::after {
 	border: 0.8rem solid transparent;
-	border-bottom-color: #000;
+	border-bottom-color: #2d3248 !important;
 	right: 1.8rem;
 }
 
@@ -6398,7 +6398,7 @@ Nav
 	transition: background 0.3s linear !important;
 }
 
-#mainNav .primary-menu .current-menu-item a,
+#mainNav .primary-menu .current-menu-item > a,
 #mainNav .primary-menu li:hover,
 #mainNav .primary-menu .current-menu-item {
 	text-decoration: none;
