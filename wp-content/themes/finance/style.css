@@ -151,14 +151,6 @@ body {
 }
 
 
-/* Base Transitions -------------------------- */
-
-a,
-path {
-	transition: all 0.15s linear;
-}
-
-
 /* Screen Reader Text ------------------------ */
 
 .screen-reader-text {
@@ -1278,7 +1270,6 @@ ul.social-icons li {
 #site-header {
 	background: #fff;
 	position: relative;
-	overflow: hidden;
 }
 
 .header-inner {
@@ -1574,7 +1565,7 @@ ul.primary-menu {
 /* SUB MENU */
 
 .primary-menu ul {
-	background: #000;
+	background: #2d3248 !important;
 	border-radius: 0.4rem;
 	color: #fff;
 	font-size: 1.7rem;
@@ -6306,7 +6297,7 @@ Columns
 }
 
 .cols .col {
-	flex: 0 0 33.33%;
+	width: 33.33%;
 }
 
 /* 
@@ -6391,18 +6382,31 @@ Nav
 
 #mainNav .primary-menu li {
 	margin: 0;
+	display: flex;
+	align-items: center;
+	transition: background 0.3s linear;
+}
+
+#mainNav .primary-menu li .icon {
+	color: #fff;
+	position: static;
 }
 
 #mainNav .primary-menu li a {
 	padding: 15px 20px;
 	color: #fff;
-	transition: background 0.3s linear;
+	transition: background 0.3s linear !important;
 }
 
 #mainNav .primary-menu .current-menu-item a,
-#mainNav .primary-menu li a:hover {
+#mainNav .primary-menu li:hover,
+#mainNav .primary-menu .current-menu-item {
 	text-decoration: none;
 	background: #0461d0;
+}
+
+#mainNav .primary-menu li a:hover {
+	text-decoration: none;
 }
 
 /* 
@@ -6438,6 +6442,7 @@ Hero
 	text-transform: uppercase;
 	text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
 	letter-spacing: 0;
+	width: 100%;
 }
 
 /* 
@@ -6817,7 +6822,7 @@ Blog - Detail
 	}
 
 	.cols .col {
-		flex: 0 0 50%;
+		width: 50%;
 	}
 
 	.testimonialBlock .container {
@@ -6908,7 +6913,7 @@ Blog - Detail
 	}
 
 	.cols .col {
-		flex: 0 0 100%;
+		width: 100%;
 	}
 
 	.contactBannerBlock {
@@ -7000,5 +7005,9 @@ Blog - Detail
 
 	.close-nav-toggle {
 		padding: 3rem 15px !important;
+	}
+
+	.heroBlock .holder:before {
+		background: rgba(0, 0, 0, 0.2);
 	}
 }
